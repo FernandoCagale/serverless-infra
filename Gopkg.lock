@@ -9,6 +9,18 @@
 
 [[projects]]
   branch = "master"
+  name = "github.com/auth0/go-jwt-middleware"
+  packages = ["."]
+  revision = "5493cabe49f7bfa6e2ec444a09d334d90cd4e2bd"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/dgrijalva/jwt-go"
+  packages = ["."]
+  revision = "0b96aaa707760d6ab28d9b9d1913ff5993328bae"
+
+[[projects]]
+  branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
   revision = "182538f80094b6a8efaade63a8fd8e0d9d5843dd"
@@ -25,6 +37,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "2ff74ab888ae92dc492098cae3e3faeec5ca77aa3f132571c537894fa1d04229"
+  inputs-digest = "390f1a0888eb11a08e72b02ef24cf87bf29d55fc1a4d876382a3b1b866c414c4"
   solver-name = "gps-cdcl"
   solver-version = 1

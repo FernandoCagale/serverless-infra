@@ -20,3 +20,10 @@ func NotAllowedHandler() http.Handler {
 		render.ResponseError(w, error.AddMethodNotAllowedError("Method Not Allowed"))
 	})
 }
+
+//UnauthorizeddHandler Unauthorize
+func UnauthorizeddHandler() http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		render.ResponseError(w, error.AddUnauthorizedError("Missing Authentication"))
+	})
+}

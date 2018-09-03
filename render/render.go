@@ -4,14 +4,14 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/FernandoCagale/serverless-infra/error"
+	"github.com/FernandoCagale/serverless-infra/errors"
 )
 
 //Response response status code
 func Response(w http.ResponseWriter, response interface{}, code int) {
 	json, err := json.Marshal(response)
 	if err != nil {
-		ResponseError(w, error.AddInternalServerError(err.Error()))
+		ResponseError(w, errors.AddInternalServerError(err.Error()))
 		return
 	}
 	addHeaderDefaults(w, code)
@@ -19,10 +19,10 @@ func Response(w http.ResponseWriter, response interface{}, code int) {
 }
 
 //ResponseError error
-func ResponseError(w http.ResponseWriter, response error.ResponseError) {
+func ResponseError(w http.ResponseWriter, response errors.ResponseError) {
 	json, err := json.Marshal(response)
 	if err != nil {
-		ResponseError(w, error.AddInternalServerError(err.Error()))
+		ResponseError(w, errors.AddInternalServerError(err.Error()))
 		return
 	}
 	addHeaderDefaults(w, response.Code)

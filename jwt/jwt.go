@@ -3,7 +3,7 @@ package jwt
 import (
 	"net/http"
 
-	errors "github.com/FernandoCagale/serverless-infra/error"
+	"github.com/FernandoCagale/serverless-infra/errors"
 	"github.com/FernandoCagale/serverless-infra/render"
 	jwtmiddleware "github.com/auth0/go-jwt-middleware"
 	jwtgo "github.com/dgrijalva/jwt-go"
